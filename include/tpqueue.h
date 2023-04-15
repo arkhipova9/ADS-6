@@ -26,7 +26,7 @@ class TPQueue {
   void push(const T& value) {
     assert(num < sizeMax);
     if (num == 0) {
-      arr[lastN++] == value;
+      arr[lastN++] = value;
       num++;
     } else {
       int i = lastN - 1;
