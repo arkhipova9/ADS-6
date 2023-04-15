@@ -11,17 +11,17 @@ struct SYM {
 template<typename T, int size>
 class TPQueue {
  private:
-   T* arr;
-   int sizeMax, firstN, lastN, num;
- 
- public:
-   TPQuene():sizeMax(size), firstN(0), lastN(0), num(0) {
-     arr = new T[sizeMax + 1];
-   }
+  T* arr;
+  int sizeMax, firstN, lastN, num;
 
-   ~TPQuene() {
-     delete[] arr;
-   }
+ public:
+  TPQueue():sizeMax(size), firstN(0), lastN(0), num(0) {
+    arr = new T[sizeMax + 1];
+  }
+
+  ~TPQueue() {
+    delete[] arr;
+  }
 
   void push(const T& value) {
     assert(num < sizeMax);
